@@ -50,8 +50,8 @@ WORKDIR ${WORKDIR}
 USER ${USER}
 
 #### INSTALL SPECFEM ####
-RUN git clone --recursive --branch devel https://github.com/geodynamics/specfem3d.git
-WORKDIR ${WORKDIR}/specfem3d/
+RUN git clone --recursive --branch devel https://github.com/geodynamics/specfem2d.git
+WORKDIR ${WORKDIR}/specfem2d/
 ENV MPI_INC=/usr/local/include:$MPI_INC=/usr/local/include
 ENV LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 ENV CUDA_LIB=/usr/local/cuda-10.2/lib64/
